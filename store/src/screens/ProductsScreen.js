@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
+import { View, Text , StatusBar} from 'react-native'
 import React from 'react'
 
 const ProductsScreen = () => {
   return (
-    <View>
-      <Text>ProductsScreen</Text>
-    </View>
-  )
+       <View className='bg-slate-500'>
+        <Text className='text-lg'>Product screeen</Text>
+       </View>
+   );
+  
 }
 
 export default ProductsScreen
