@@ -2,12 +2,11 @@ import { View, Text, FlatList, Image, ScrollView, Pressable} from 'react-native'
 import React from 'react'
 import products from '../data/products'
 import { useWindowDimensions } from 'react-native'
-// import {useSelector } from 'react-redux'
+import {useSelector } from 'react-redux'
 
 const DetailsScreen = () => {
   const {width} = useWindowDimensions()
-  const product = products[0]
-  // const product =  useSelector((state) => state.products.selectedProduct)
+  const productt =  useSelector((state) => state.products.selectedProduct)
   return (
     <>
     <ScrollView>
@@ -15,7 +14,7 @@ const DetailsScreen = () => {
 
       <FlatList
         horizontal
-        data={product.images}
+        data={productt.images}
         renderItem={({item})=>(
           <View>
             <Image source={{ uri: item}} style={{ width, aspectRatio: 1 }}/>
@@ -27,10 +26,10 @@ const DetailsScreen = () => {
         />
 
         <View className="px-4">
-          <Text className="text-lg font-bold">{product.name}</Text>
-          <Text className="mt-2 text-sm">${product.price}</Text>
-          <Text className="space-x-3 mt-2">{product.sizes}</Text>
-          <Text className="mt-3">{product.description}</Text>
+          <Text className="text-lg font-bold">{productt.name}</Text>
+          <Text className="mt-2 text-sm">${productt.price}</Text>
+          <Text className="space-x-3 mt-2">{productt.sizes}</Text>
+          <Text className="mt-3">{productt.description}</Text>
         </View>
        
     </ScrollView>

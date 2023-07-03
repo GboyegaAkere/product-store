@@ -3,12 +3,11 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { useSelector,useDispatch  } from 'react-redux';
 import { ProductSlice } from '../store/ProductSlice';
-import products from '../data/products';
 
 const ProductsScreen = () => {
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     const navigation = useNavigation()
-    // const products = useSelector((state) => state.products.products)
+    const products = useSelector((state) => state.products.products)
   return (
     <View>
         <FlatList

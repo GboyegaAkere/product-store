@@ -14,8 +14,12 @@ const AppNavigator = () => {
   
    <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen name='Details'
+        component={DetailsScreen} 
+        options={{presentation:'modal'}}
+        />
        
-       <Stack.Screen name='Products' component={ProductsScreen}
+       {/* <Stack.Screen name='Products' component={ProductsScreen}
         options={({ navigation }) => ({
           headerRight: () => (
             <Pressable
@@ -29,13 +33,13 @@ const AppNavigator = () => {
           ),
         })}
 
-       />
-       <Stack.Screen name='Details'
+       /> */}
+       {/* <Stack.Screen name='Details'
         component={DetailsScreen} 
         options={{presentation:'modal'}}
-        />
-      <Stack.Screen name='Cart' component={ShoppingCartsScreen} />
-       
+        /> */}
+      {/* <Stack.Screen name='Cart' component={ShoppingCartsScreen} />
+        */}
       </Stack.Navigator>
    </NavigationContainer>
   )
