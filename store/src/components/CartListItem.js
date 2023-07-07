@@ -1,26 +1,14 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { cartSlice } from "../store/cartSlice";
-import {useDispatch} from "react-redux"
+
+
+
+
 
 const CartListItem = ({ cartItem }) => {
-  // const dispatch = useDispatch()
-  // const increaseQuantity = () => {
-  //   dispatch (cartSlice.actions.changeQuality({
-  //     productId: cartItem.product.id, amount:1
-  //   }))
-  // };
-     
 
 
-
-  // const decreaseQuantity = () => {
-  //   dispatch (cartSlice.actions.changeQuality({
-  //     productId: cartItem.product.id, amount:-1
-  //   }))
-  // };
-
-  return (
+   return (
     <View className="flex-row space-x-3">
       <Image source={{ uri: cartItem.product.image }} style={{width:"40%", aspectRatio:1}} />
       <View className="mt-7">
