@@ -4,21 +4,21 @@ import { cartSlice } from "../store/cartSlice";
 import {useDispatch} from "react-redux"
 
 const CartListItem = ({ cartItem }) => {
-  const dispatch = useDispatch()
-  const increaseQuantity = () => {
-    dispatch (cartSlice.actions.changeQuality({
-      productId: cartItem.product.id, amount:1
-    }))
-  };
+  // const dispatch = useDispatch()
+  // const increaseQuantity = () => {
+  //   dispatch (cartSlice.actions.changeQuality({
+  //     productId: cartItem.product.id, amount:1
+  //   }))
+  // };
      
 
 
 
-  const decreaseQuantity = () => {
-    dispatch (cartSlice.actions.changeQuality({
-      productId: cartItem.product.id, amount:-1
-    }))
-  };
+  // const decreaseQuantity = () => {
+  //   dispatch (cartSlice.actions.changeQuality({
+  //     productId: cartItem.product.id, amount:-1
+  //   }))
+  // };
 
   return (
     <View className="flex-row space-x-3">
@@ -29,14 +29,14 @@ const CartListItem = ({ cartItem }) => {
 
         <View className="flex-row space-x-3 mt-1">
           <Feather
-            onPress={decreaseQuantity}
+            // onPress={decreaseQuantity}
             name="minus-circle"
             size={24}
             color="gray"
           />
           <Text className="self-center">{cartItem.quantity}</Text>
           <Feather
-            onPress={increaseQuantity}
+            // onPress={increaseQuantity}
             name="plus-circle"
             size={24}
             color="gray"
