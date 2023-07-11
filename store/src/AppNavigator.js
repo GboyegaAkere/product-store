@@ -5,11 +5,15 @@ import DetailsScreen from './screens/DetailsScreen'
 import ShoppingCartsScreen from './screens/ShoppingCartsScreen'
 import { Pressable, Text } from 'react-native'
 import { Ionicons } from "@expo/vector-icons";
+import { useSelector } from 'react-redux'
+import { selectedNumberOfItems } from './store/cartSlice'
 
 
 const Stack = createNativeStackNavigator()
 
+
 const AppNavigator = () => {
+  const selectedItems = useSelector(selectedNumberOfItems)
   return (
   
    <NavigationContainer>
@@ -24,7 +28,7 @@ const AppNavigator = () => {
               className="space-x-1 items-center"
             >
               <Ionicons name="cart-outline" size={25} color="gray" />
-              <Text className="text-lg">1</Text>
+              <Text className="text-lg">{selectedItems}</Text>
             </Pressable>
           ),
         })}
